@@ -41,6 +41,6 @@ typedef struct instruction_s
 void pall(stack_t **stack);
 stack_t *push(stack_t **stack, int x);
 stack_t *pop(stack_t **stack);
-void clearStack(stack_t **stack);
+stack_t *clearStack(stack_t **stack);
 
 #endif

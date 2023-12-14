@@ -5,11 +5,13 @@
  * @stack: stack
 */
 
-void clearStack(stack_t **stack)
+stack_t *clearStack(stack_t **stack)
 {
-	if (*stack == NULL)
-		return;
+	stack_t *temp = *stack;
 
-	while (*stack)
-		pop(stack);
+	if (temp == NULL)
+		return (temp);
+
+	while (temp)
+		temp = pop(&temp);
 }

@@ -28,7 +28,7 @@ int main(int argc, char *argv)
 
 	printf("\n---------------\n");
 
-	clearStack(&stack);
+	stack = clearStack(&stack);
 	pall(&stack);
 
 	return (0);

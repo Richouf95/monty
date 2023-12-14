@@ -1,17 +1,19 @@
 #include "monty.h"
 
 /**
- * clearStack - clear stack
+ * clear_stack - clear stack
  * @stack: stack
 */
 
-stack_t *clearStack(stack_t **stack)
+void free_stack(stack_t **stack, unsigned int line_number)
 {
-	stack_t *temp = *stack;
+	stack_t *temp;
 
-	if (temp == NULL)
-		return (temp);
-
-	while (temp)
-		temp = pop(&temp);
+	while (*stack)
+	{
+		printf("line_number: %u", line_number);
+		temp = *stack;
+		*stack = (*stack)->next;
+		free(temp);
+	}
 }

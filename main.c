@@ -3,33 +3,24 @@
 /**
  * main - main function
  * @argc: number of args
- * @argv! list of args
+ * @argv: list of args
  * Return: program end status
 */
 
-int main(int argc, char *argv)
+int main(int argc, char **argv)
 {
+	char *fileName;
 	stack_t *stack = NULL;
+	data.stack = &stack;
 
-	printf("Hello World\n");
+	if (argc != 2)
+		exit(EXIT_FAILURE);
 
-	pall(&stack);
+	fileName = argv[1];
 
-	printf("\n---------------\n");
+	readMonty(fileName);
 
-	stack = push(&stack, 1);
-	stack = push(&stack, 2);
-	stack = push(&stack, 3);
-	pall(&stack);
-	stack = pop(&stack);
-
-	printf("\n---------------\n");
-	pall(&stack);
-
-	printf("\n---------------\n");
-
-	stack = clearStack(&stack);
-	pall(&stack);
+	free_stack(&stack, 0);
 
 	return (0);
 }

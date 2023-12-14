@@ -1,23 +1,20 @@
 #include "monty.h"
 
 /**
- * pall - print stack items
+ * op_pall - print all nodes
  * @stack: stack
 */
 
-void pall(stack_t **stack)
+void op_pall(stack_t **stack, unsigned int line_number)
 {
 	stack_t *temp = *stack;
 
-	if (temp == NULL)
-	{
-		printf("Rien a afficher\n");
-		return;
-	}
-
 	while (temp)
 	{
-		printf("%d\n", temp->n);
+		if (!temp->n)
+			printf("line_number : %u", line_number);
+		else
+			printf("%d\n", temp->n);
 		temp = temp->next;
 	}
 }

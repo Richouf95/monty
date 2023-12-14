@@ -1,31 +1,16 @@
 #include "monty.h"
 
 /**
- * push - add new node to stak
+ * op_push - function to add new node
  * @stack: stack
- * @x: new node value
- * Return: New stack
+ * @x: node value
 */
 
-stack_t *push(stack_t **stack, int x)
+extern data_t data;
+
+void op_push(stack_t **stack, unsigned int line_number)
 {
-	stack_t *element;
+	printf("Line number %d", line_number);
 
-	element = malloc(sizeof(*element));
-
-	if (element == NULL)
-		exit(EXIT_FAILURE);
-
-	element->n = x;
-	element->prev = NULL;
-
-	if (*stack == NULL)
-		element->next = NULL;
-	else
-	{
-		element->next = *stack;
-		(*stack)->prev = element;
-	}
-
-	return (element);
+	addNode(stack, data.x);
 }

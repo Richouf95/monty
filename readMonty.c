@@ -30,7 +30,6 @@ void readMonty(char *fileName)
 				if (strcmp(listFunctions[i].opcode, data.op) == 0)
 				{
 					listFunctions[i].f(data.stack, 0);
-					/*printf("\n+++++\n\tTu dois %s\n+++++\n", listFunctions[i].opcode);*/
 					break;
 				}
 			}

@@ -43,6 +43,7 @@ typedef struct instruction_s
  * struct data_s - forward data
  * @op: the opcode
  * @x: node value
+ * @n: line number
  * @stack: stack
  *
  * Description: opcode and node value
@@ -52,6 +53,7 @@ typedef struct data_s
 {
 	char *op;
 	int x;
+	unsigned int n;
 	stack_t **stack;
 } data_t;
 

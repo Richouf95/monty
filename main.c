@@ -20,7 +20,7 @@ int main(int argc, char **argv)
 
 	readMonty(fileName);
 
-	free_stack(&stack, 0);
+	free_stack(&stack);
 
 	return (0);
 }

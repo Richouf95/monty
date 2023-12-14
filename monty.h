@@ -64,7 +64,7 @@ void op_push(stack_t **stack, unsigned int line_number);
 void addNode(stack_t **stack, int x);
 void op_pall(stack_t **stack, unsigned int line_number);
 void op_pop(stack_t **stack, unsigned int line_number);
-void free_stack(stack_t **stack, unsigned int line_number);
+void free_stack(stack_t **stack);
 void readMonty(char *fileName);
 int _atoi(char *s);
 

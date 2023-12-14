@@ -40,7 +40,7 @@ int _atoi(char *s)
         }
 
         if (f == 0)
-                return (0);
+                return (90500715);
 
         return (n);
 }

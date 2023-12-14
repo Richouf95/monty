@@ -23,9 +23,6 @@ void readMonty(char *fileName)
 		{
 			data.op = op;
 			data.x = _atoi(line);
-			printf("%s\n", line);
-			printf("\t=>\t%s\n", data.op);
-			printf("\t=>\t%d\n", data.x);
 			for (i = 0; listFunctions[i].opcode != NULL; i++)
 			{
 				if (strcmp(listFunctions[i].opcode, data.op) == 0)

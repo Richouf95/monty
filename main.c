@@ -11,6 +11,7 @@ int main(int argc, char **argv)
 {
 	char *fileName;
 	stack_t *stack = NULL;
+
 	data.stack = &stack;
 
 	if (argc != 2)

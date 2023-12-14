@@ -3,6 +3,7 @@
 /**
  * op_pop - remove head of stack
  * @stack: stack
+ * @line_number: line number
 */
 
 void op_pop(stack_t **stack, unsigned int line_number)

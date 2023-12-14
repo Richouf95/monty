@@ -10,7 +10,9 @@ void readMonty(char *fileName)
 	char line[25];
 	char op[25];
 	int i;
-	instruction_t listFunctions[] = {{"push", op_push}, {"pop", op_pop}, {"pall", op_pall}};
+	instruction_t listFunctions[] = {
+		{"push", op_push}, {"pop", op_pop}, {"pall", op_pall}
+	};
 
 	FILE *file = fopen(fileName, "r");
 

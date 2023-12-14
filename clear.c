@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * clear_stack - clear stack
+ * free_stack - clear stack
  * @stack: stack
 */
 

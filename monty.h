@@ -40,9 +40,10 @@ typedef struct instruction_s
 } instruction_t;
 
 /**
- * struck data_s - forward data
- * @opcode: the opcode
+ * struct data_s - forward data
+ * @op: the opcode
  * @x: node value
+ * @stack: stack
  *
  * Description: opcode and node value
  * for something
@@ -57,7 +58,9 @@ typedef struct data_s
 data_t data;
 
 /**
- * Prototypes
+ * Prototypes - rfd
+ * @stack: stack
+ * @line_number: line number
 */
 
 void op_push(stack_t **stack, unsigned int line_number);

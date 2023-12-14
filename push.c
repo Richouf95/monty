@@ -3,10 +3,8 @@
 /**
  * op_push - function to add new node
  * @stack: stack
- * @x: node value
+ * @line_number: line number
 */
-
-extern data_t data;
 
 void op_push(stack_t **stack, unsigned int line_number)
 {

@@ -3,6 +3,7 @@
 /**
  * op_pint - print stack head
  * @line_number: line number
+ * @stack: stack
 */
 
 void op_pint(stack_t **stack, unsigned int line_number)

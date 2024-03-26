@@ -15,7 +15,10 @@ int main(int argc, char **argv)
 	data.stack = &stack;
 
 	if (argc != 2)
+	{
+		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
+	}
 
 	fileName = argv[1];
 

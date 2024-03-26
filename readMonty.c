@@ -9,17 +9,23 @@ void readMonty(char *fileName)
 {
 	char line[25];
 	char op[25];
-	int i;
+	int i, j = 0;
 	unsigned int n = 1;
 	instruction_t listFunctions[] = {
 		{"push", op_push}, {"pop", op_pop}, {"pall", op_pall},
 		{"pint", op_pint}, {NULL, NULL}
 	};
-
+	int listSize = sizeof(listFunctions) / sizeof(listFunctions[0]);
+	
 	FILE *file = fopen(fileName, "r");
 
+	printf("listSize : %d", listSize);
+
 	if (file == NULL)
+	{
+		fprintf(stderr, "Error: Can't open file %s\n", fileName);
 		exit(EXIT_FAILURE);
+	}
 
 	while (fgets(line, sizeof(line), file) != NULL)
 	{
@@ -41,6 +47,14 @@ void readMonty(char *fileName)
 					listFunctions[i].f(data.stack, n);
 					break;
 				}
+				if (j == listSize -1)
+				{
+					fprintf(stderr, "L%u: unknown instruction %s\n", n, op);
+					free_stack(data.stack);
+					fclose(file);
+					exit(EXIT_FAILURE);
+				}
+				j++;
 			}
 		}
 		n++;

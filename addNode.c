@@ -13,7 +13,10 @@ void addNode(stack_t **stack, int x)
 
 	newNode = malloc(sizeof(*newNode));
 	if (newNode == NULL)
+	{
+		fprintf(stderr, "Error: malloc failed");
 		exit(EXIT_FAILURE);
+	}
 
 	newNode->n = x;
 

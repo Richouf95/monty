@@ -1,11 +1,13 @@
 #include "monty.h"
 
 /**
- *
+ * op_nop - no thing
+ * @stack: stack
+ * @line_number: line number
 */
 
-void op_nop(stack_t **head, unsigned int line_number)
+void op_nop(stack_t **stack, unsigned int line_number)
 {
-	(void) *head;
+	(void) *stack;
 	(void) line_number;
 }
